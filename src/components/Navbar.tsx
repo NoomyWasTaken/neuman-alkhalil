@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { resumeUrl } from "@/data/social";
+import { resumeUrl, profile } from "@/data/social";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -12,7 +12,7 @@ const navItems = [
   { label: "Experience", path: "/experience" },
   { label: "Projects", path: "/projects" },
   { label: "Skills", path: "/skills" },
-  { label: "Papers", path: "/papers" },
+  { label: "Research", path: "/research" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -24,7 +24,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-sm">
       <nav className="container flex h-14 items-center justify-between" aria-label="Main navigation">
         <Link to="/" className="text-lg font-bold tracking-tight">
-          Portfolio
+          {profile.name}
         </Link>
 
         {/* Desktop nav */}
