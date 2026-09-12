@@ -27,9 +27,15 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
       </div>
 
       <h1 className="text-3xl font-bold tracking-tight mb-2">{project.title}</h1>
-      <p className="text-lg text-muted-foreground mb-8">{project.tagline}</p>
+      <p className="text-lg text-muted-foreground mb-3">{project.tagline}</p>
 
-      <div className="flex gap-3 mb-10">
+      {(project.period || project.affiliation) && (
+        <p className="text-sm text-muted-foreground mb-8">
+          {[project.period, project.affiliation].filter(Boolean).join(" · ")}
+        </p>
+      )}
+
+      <div className="flex flex-wrap gap-3 mb-10">
         {project.githubUrl && (
           <Button variant="outline" size="sm" asChild>
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
