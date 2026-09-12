@@ -4,7 +4,7 @@ import { experiences } from "@/data/experience";
 import { useEffect } from "react";
 
 const Experience = () => {
-  useEffect(() => { document.title = "Experience — Portfolio"; }, []);
+  useEffect(() => { document.title = "Experience — Neuman Alkhalil"; }, []);
 
   return (
     <div className="container max-w-3xl py-16 px-4">

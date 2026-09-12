@@ -8,7 +8,7 @@ import { Search } from "lucide-react";
 const Skills = () => {
   const [filter, setFilter] = useState("");
 
-  useEffect(() => { document.title = "Skills — Portfolio"; }, []);
+  useEffect(() => { document.title = "Skills — Neuman Alkhalil"; }, []);
 
   const filtered = skillCategories
     .map((cat) => ({

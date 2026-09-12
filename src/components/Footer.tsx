@@ -1,11 +1,10 @@
-import { Github, Linkedin, Mail, Twitter, Download } from "lucide-react";
-import { socialLinks, resumeUrl } from "@/data/social";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { socialLinks, resumeUrl, profile } from "@/data/social";
 
 const iconMap = {
   github: Github,
   linkedin: Linkedin,
   mail: Mail,
-  twitter: Twitter,
 };
 
 export function Footer() {
@@ -39,7 +38,7 @@ export function Footer() {
             Resume
           </a>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
+            © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>
         </div>
       </div>
