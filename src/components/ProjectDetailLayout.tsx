@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, FileText, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/data/projects";
@@ -49,6 +49,14 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4 mr-1.5" />
               Live Demo
+            </a>
+          </Button>
+        )}
+        {project.paperUrl && (
+          <Button variant="outline" size="sm" asChild>
+            <a href={project.paperUrl} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4 mr-1.5" />
+              Paper
             </a>
           </Button>
         )}
