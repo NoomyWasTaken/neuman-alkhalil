@@ -1,34 +1,46 @@
 # Seeding the site with your real content
 
-## Where content lives today
+All placeholder content gets replaced with your resume + LinkedIn details.
 
-There is no editor yet. All the text on the site (experience, projects, skills, publications, links) sits in typed content files in the codebase. Nothing is lost by starting there — the structure is already shaped so it can later be served from a database.
+## Identity and links
 
-## What I need from you
+- Name: Neuman Alkhalil. Title: Founding AI Software Engineer & Chief Science Officer @ Horalix.
+- Hero intro rewritten from your About: end-to-end production AI systems across backend, AI workflows, databases, deployment and evaluation; clinical AI, recruiting AI, and full-stack products.
+- Links: GitHub (NoomyWasTaken), LinkedIn (neuman-alkhalil), email neuman.alkhalil@outlook.com. Twitter link removed. No phone numbers shown.
+- Your resume PDF is added to the site so the "Download Resume" button gives the real file.
+- Page titles and descriptions updated with your real name and role.
 
-1. **Your resume** — upload the PDF or Word file. I read it directly.
-2. **Your LinkedIn text** — a URL alone can't be read (LinkedIn blocks automated access), so copy and paste the text of these sections into chat:
-   - Headline + About
-   - Each Experience entry (role, company, dates, location, bullet points)
-   - Education, Projects, Publications, Certifications, Skills
-   - Your public profile URL, GitHub, email, and any other links you want shown
+## Experience
 
-## What I'll do with it
+Five roles, newest first: Horalix (Jul 2025 – Present), Authority Partners (Mar–Jun 2026), Tardigrade Development (Dec 2024 – Jul 2025), Sarajevo Unlimited (Oct–Dec 2021), ZIRA (Sep–Nov 2021). Each with location, bullets from your resume, and its technologies.
 
-- Fill in experience entries with real roles, companies, dates, locations, highlights, and technologies.
-- Fill in projects with title, one-line summary, problem, approach, stack, and outcomes. Resumes rarely cover all of these — I will mark anything thin and list the gaps back to you rather than inventing detail.
-- Rebuild the skills list from what actually appears in your resume and profile, grouped into sensible categories.
-- Fill in publications with title, authors, venue, year, abstract, and links where available.
-- Replace the placeholder social links, email, and hero intro with yours.
-- Put your resume file in the site so the "Resume" button downloads the real thing.
-- Update the page titles and descriptions to use your real name and title.
+## Projects
 
-Anything I can't find in either source (a missing date, a project outcome, a working link) I will list for you to confirm — I won't fabricate it.
+Eight projects with summary, problem, approach, stack and outcomes: LPX.GG, Real-Time Speech Emotion Recognition, GAN-Based Image Restoration, Search Engine (IR), Multilingual Grammatical Error Detection, Yelp Review Analysis, English Language Learning Chatbot, Idi.ba. LPX.GG, speech emotion, and GAN restoration are featured.
 
-## Editor later
+Each project can optionally carry a paper link and a GitHub link — both are optional, so projects without one simply don't show the button. Send me the paper PDFs/links and the repo for the project you mentioned and I'll attach them.
 
-You chose to add a browser-based editor eventually. That needs a backend with a login, which is a separate step after the content is in. Once the content files are accurate, I can move the same content into the backend and build admin pages for editing it. No need to decide the timing now.
+Where your source didn't state a measurable outcome, I use what you actually wrote rather than inventing numbers.
 
-## Next step
+## Papers page
 
-Upload the resume and paste the LinkedIn text in one message, and I'll seed everything from it.
+Replaced with a "Research" page that lists your academic project write-ups and links to any paper you attach later. It stays out of the way when nothing is linked.
+
+## Skills
+
+Rebuilt from your resume: Languages; AI & Machine Learning; Backend & Data; Frontend; Cloud & DevOps.
+
+## Home page additions
+
+- Education block: Georgetown M.S. Computer Science, University of Buckingham B.S., Sarajevo School of Science and Technology B.S. (dual degree).
+- Awards & recognition block: MedReCon Hackathon winner, Discover ViennaUP grant, Adria Future special recognition, FutureMinds Lab winner, SSST academic achievement, plus the NVIDIA CUDA certificate and your languages (English native, Bosnian, Arabic).
+
+## Technical notes
+
+- Content stays in typed files under `src/data/` (`experience.ts`, `projects.ts`, `skills.ts`, `social.ts`, plus new `education.ts` and `awards.ts`); `papers.ts` becomes `research.ts`.
+- `Project` gains optional `paperUrl`; `githubUrl`/`demoUrl` stay optional and their buttons render conditionally.
+- Resume PDF served as a static asset and referenced by `resumeUrl`.
+
+## Gaps I'll flag, not invent
+
+Tardigrade's technologies list is thin; several projects have no public demo or repo. Anything missing is left out rather than made up.
