@@ -119,6 +119,13 @@ const Contact = () => {
             );
           })}
         </div>
+
+        <Button variant="outline" className="mt-6" asChild>
+          <a href={resumeUrl} download>
+            <Download className="h-4 w-4 mr-1.5" />
+            Download Resume
+          </a>
+        </Button>
       </div>
     </div>
   );
