@@ -75,10 +75,12 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-3">Architecture</h2>
-          <p className="text-muted-foreground leading-relaxed">{project.architecture}</p>
-        </div>
+        {project.architecture && (
+          <div>
+            <h2 className="text-xl font-semibold mb-3">Architecture</h2>
+            <p className="text-muted-foreground leading-relaxed">{project.architecture}</p>
+          </div>
+        )}
 
         <div>
           <h2 className="text-xl font-semibold mb-3">Outcomes</h2>
