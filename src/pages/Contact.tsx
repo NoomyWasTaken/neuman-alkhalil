@@ -9,8 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { socialLinks } from "@/data/social";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { socialLinks, resumeUrl } from "@/data/social";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const iconMap = { github: Github, linkedin: Linkedin, mail: Mail } as const;
 
