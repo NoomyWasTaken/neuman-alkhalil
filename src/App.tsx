@@ -13,7 +13,7 @@ const Experience = lazy(() => import("./pages/Experience"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const Skills = lazy(() => import("./pages/Skills"));
-const Papers = lazy(() => import("./pages/Papers"));
+const Research = lazy(() => import("./pages/Research"));
 const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
@@ -33,7 +33,7 @@ const App = () => (
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/projects/:slug" element={<ProjectDetail />} />
                 <Route path="/skills" element={<Skills />} />
-                <Route path="/papers" element={<Papers />} />
+                <Route path="/research" element={<Research />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

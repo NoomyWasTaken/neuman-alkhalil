@@ -6,26 +6,53 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "SQL", "Rust", "Go", "C++"],
+    skills: ["Python", "C#", "TypeScript", "JavaScript", "SQL", "Java"],
   },
   {
-    name: "ML / AI",
-    skills: ["PyTorch", "TensorFlow", "scikit-learn", "Hugging Face", "LangChain", "OpenAI API", "FAISS", "MLflow"],
+    name: "AI & Machine Learning",
+    skills: [
+      "PyTorch",
+      "Scikit-learn",
+      "Computer Vision",
+      "Large Language Models (LLM)",
+      "NLP",
+      "Deep Learning",
+      "CUDA",
+      "Model Deployment",
+      "Model Context Protocol (MCP)",
+    ],
   },
   {
-    name: "Frameworks",
-    skills: ["FastAPI", "React", "Next.js", "Node.js", "Flask", "Django"],
+    name: "Backend & Data",
+    skills: [
+      "FastAPI",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "REST APIs",
+      "Spring Boot",
+      "Drizzle ORM",
+      "Software Architecture",
+    ],
+  },
+  {
+    name: "Frontend",
+    skills: ["React", "Angular", "Astro", "Electron"],
   },
   {
     name: "Cloud & DevOps",
-    skills: ["AWS", "GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD"],
-  },
-  {
-    name: "Databases",
-    skills: ["PostgreSQL", "Redis", "MongoDB", "InfluxDB", "Elasticsearch", "Pinecone"],
-  },
-  {
-    name: "Tools & Practices",
-    skills: ["Git", "Linux", "Agile/Scrum", "System Design", "Technical Writing", "Code Review"],
+    skills: [
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Azure DevOps",
+      "CI/CD",
+      "Bicep",
+      "Cloudflare Workers",
+      "Keycloak",
+      "Git",
+      "SonarCloud",
+    ],
   },
 ];

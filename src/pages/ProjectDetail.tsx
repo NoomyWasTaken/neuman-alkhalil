@@ -8,7 +8,7 @@ const ProjectDetail = () => {
   const project = projects.find((p) => p.slug === slug);
 
   useEffect(() => {
-    if (project) document.title = `${project.title} — Portfolio`;
+    if (project) document.title = `${project.title} — Neuman Alkhalil`;
   }, [project]);
 
   if (!project) return <Navigate to="/projects" replace />;

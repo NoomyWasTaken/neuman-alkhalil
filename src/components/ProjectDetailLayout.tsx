@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, FileText, Github } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/data/projects";
@@ -27,9 +27,15 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
       </div>
 
       <h1 className="text-3xl font-bold tracking-tight mb-2">{project.title}</h1>
-      <p className="text-lg text-muted-foreground mb-8">{project.tagline}</p>
+      <p className="text-lg text-muted-foreground mb-3">{project.tagline}</p>
 
-      <div className="flex gap-3 mb-10">
+      {(project.period || project.affiliation) && (
+        <p className="text-sm text-muted-foreground mb-8">
+          {[project.period, project.affiliation].filter(Boolean).join(" · ")}
+        </p>
+      )}
+
+      <div className="flex flex-wrap gap-3 mb-10">
         {project.githubUrl && (
           <Button variant="outline" size="sm" asChild>
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -43,6 +49,14 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
             <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4 mr-1.5" />
               Live Demo
+            </a>
+          </Button>
+        )}
+        {project.paperUrl && (
+          <Button variant="outline" size="sm" asChild>
+            <a href={project.paperUrl} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4 mr-1.5" />
+              Paper
             </a>
           </Button>
         )}
@@ -75,10 +89,12 @@ export function ProjectDetailLayout({ project }: ProjectDetailLayoutProps) {
           </div>
         </div>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-3">Architecture</h2>
-          <p className="text-muted-foreground leading-relaxed">{project.architecture}</p>
-        </div>
+        {project.architecture && (
+          <div>
+            <h2 className="text-xl font-semibold mb-3">Architecture</h2>
+            <p className="text-muted-foreground leading-relaxed">{project.architecture}</p>
+          </div>
+        )}
 
         <div>
           <h2 className="text-xl font-semibold mb-3">Outcomes</h2>

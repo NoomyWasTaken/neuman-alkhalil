@@ -10,9 +10,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { socialLinks } from "@/data/social";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
-const iconMap = { github: Github, linkedin: Linkedin, mail: Mail, twitter: Twitter } as const;
+const iconMap = { github: Github, linkedin: Linkedin, mail: Mail } as const;
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -26,7 +26,7 @@ type ContactForm = z.infer<typeof contactSchema>;
 const Contact = () => {
   const { toast } = useToast();
 
-  useEffect(() => { document.title = "Contact — Portfolio"; }, []);
+  useEffect(() => { document.title = "Contact — Neuman Alkhalil"; }, []);
 
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
